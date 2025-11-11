@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calíope - Mi primer añito 🎂💚</title>
+
+  <!-- Miniatura / Favicon -->
+  <link rel="icon" type="image/jpeg" href="https://lisandrosanma.github.io/MiPrimeraCalifest/Miniatura.jpg">
+
+  <!-- Open Graph (para WhatsApp, Facebook, etc.) -->
+  <meta property="og:title" content="Calíope - Mi primer añito 🎂💚">
+  <meta property="og:description" content="¡Te espero para festejar mi primer añito!">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://lisandrosanma.github.io/MiPrimeraCalifest/">
+  <meta property="og:image" content="https://lisandrosanma.github.io/MiPrimeraCalifest/Miniatura.jpg">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="800">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Calíope - Mi primer añito 🎂💚">
+  <meta name="twitter:description" content="¡Te espero para festejar mi primer añito!">
+  <meta name="twitter:image" content="https://lisandrosanma.github.io/MiPrimeraCalifest/Miniatura.jpg">
+
+  <!-- Fuente -->
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Comic Neue', sans-serif;
+      background: linear-gradient(180deg, #c8f5df, #f4fffa);
+      color: #2d7a5b;
+      margin: 0;
+      text-align: center;
+      padding: 20px;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      position: relative;
+      min-height: 100vh;
+    }
+
+    h1 {
+      font-size: 2em;
+      margin-top: 20px;
+    }
+
+    p {
+      font-size: 1.2em;
+      margin: 10px 0;
+    }
+
+    #foto-bebe {
+      width: 250px;
+      max-width: 80%;
+      border-radius: 50%;
+      margin: 15px 0;
+      cursor: pointer;
+      transition: transform 0.5s ease;
+    }
+
+    /* Animación tipo vinilo */
+    .rotate {
+      animation: girar 2s linear infinite;
+    }
+
+    @keyframes girar {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 20px;
+      align-items: center;
+    }
+
+    .buttons button {
+      background: linear-gradient(90deg, #6cc8a2, #57b48c);
+      border: none;
+      color: #fff;
+      font-size: 1.1em;
+      padding: 12px 20px;
+      border-radius: 15px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      width: 80%;
+      max-width: 300px;
+    }
+
+    .buttons button:hover {
+      transform: scale(1.05);
+    }
+
+    /* Flores de fondo */
+    .flower {
+      position: absolute;
+      width: 80px;
+      opacity: 0.7;
+      animation: float 12s infinite ease-in-out;
+      z-index: 1;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(100vh) rotate(0deg); opacity: 0.5; }
+      50% { opacity: 1; }
+      100% { transform: translateY(-10vh) rotate(360deg); opacity: 0.3; }
+    }
+
+    .flower:nth-child(1) { left: 5%; animation-delay: 0s; }
+    .flower:nth-child(2) { left: 15%; animation-delay: 1s; }
+    .flower:nth-child(3) { left: 30%; animation-delay: 2s; }
+    .flower:nth-child(4) { left: 50%; animation-delay: 3s; }
+    .flower:nth-child(5) { left: 65%; animation-delay: 4s; }
+    .flower:nth-child(6) { left: 75%; animation-delay: 5s; }
+    .flower:nth-child(7) { left: 85%; animation-delay: 6s; }
+    .flower:nth-child(8) { left: 90%; animation-delay: 7s; }
+  </style>
+</head>
+
+<body>
+
+  <!-- Flores de fondo -->
+  <img class="flower" src="flores/Flor1.png" alt="Flor">
+  <img class="flower" src="flores/Flor2.png" alt="Flor">
+  <img class="flower" src="flores/Flor3.png" alt="Flor">
+  <img class="flower" src="flores/Flor4.png" alt="Flor">
+  <img class="flower" src="flores/Flor5.png" alt="Flor">
+  <img class="flower" src="flores/Flor1.png" alt="Flor">
+  <img class="flower" src="flores/Flor2.png" alt="Flor">
+  <img class="flower" src="flores/Flor3.png" alt="Flor">
+
+  <h1>🎂Los invito a la Califest 💚</h1>
+  <p>¡Te espero para festejar mi primer añito!</p>
+
+  <img id="foto-bebe" src="foto_bebe.jpg" alt="Calíope">
+  <p>Soy la bebé más guarachera, si no me creés...<br>¡tocá mi foto! 💃</p>
+
+  <div class="buttons">
+    <button onclick="window.open('https://maps.google.com/?q=-34.8557038,-58.3888914','_blank')">📍 Cómo llegar</button>
+    <button onclick="window.open('https://calendar.google.com/calendar/render?action=TEMPLATE&text=Cumple+de+Calíope&dates=20251206T160000Z/20251206T190000Z&details=Primer+añito+en+Tano+Eventos&location=Tano+Eventos','_blank')">📅 Guardar fecha</button>
+    <button id="confirmar-btn" onclick="window.open('https://wa.me/5491156637770?text=Confirmo asistencia al cumple de Calíope','_blank')">💬 Confirmar asistencia</button>
+  </div>
+
+  <audio id="bg-music" loop>
+    <source src="musica.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    const foto = document.getElementById('foto-bebe');
+    const audio = document.getElementById('bg-music');
+    const confirmar = document.getElementById('confirmar-btn');
+
+    // Al tocar la foto, reproduce música y rota
+    foto.addEventListener('click', () => {
+      audio.play();
+      foto.classList.add('rotate');
+    });
+
+    // Al finalizar el audio, deja de rotar
+    audio.addEventListener('ended', () => {
+      foto.classList.remove('rotate');
+    });
+
+    // Mensaje luego de confirmar asistencia
+    confirmar.addEventListener('click', () => {
+      setTimeout(() => alert('¡Nos vemos en la Califest! 🎂💚'), 3000);
+    });
+  </script>
+</body>
+</html>
+
+
+
+
+
+
